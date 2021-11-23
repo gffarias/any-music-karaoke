@@ -1,0 +1,24 @@
+{
+  "name": "any-music-karaoke",
+  "version": "1.0.0",
+  "description": "Make karaoke animations for any music on YouTube.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gffarias/any-music-karaoke.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gffarias/any-music-karaoke/issues"
+  },
+  "homepage": "https://github.com/gffarias/any-music-karaoke#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
