@@ -22,10 +22,10 @@ app.listen(port, () => {
 
 app.post('/', (req, res) => {
     controller(req.body.share.split('&')[0].replace('music', 'www'))
-    .then(ans => res.json(ans))
+        .then(ans => res.json(ans))
 })
 
-async function controller (share) {
+async function controller(share) {
     try {
         const { stdout } = await exec(`echo $${share} | python description.py`)
         const [path, subtitles] = await Promise.all([getAudio(share), postSubtitles(share, stdout)])
@@ -35,7 +35,7 @@ async function controller (share) {
     }
 }
 
-async function postSubtitles (share, description) {
+async function postSubtitles(share, description) {
     const [tokens, lyrics] = await Promise.all([getAutoLyrixAlignTokens(), getGeniusLyrics(description)])
     const boundary = '---------------------------17312309539142609584114046060'
     const payload = [
@@ -82,7 +82,7 @@ async function postSubtitles (share, description) {
     return { csrf: tokens.csrf, lyrics }
 }
 
-async function getGeniusLyrics (description) {
+async function getGeniusLyrics(description) {
     const [title, artist] = description.split('\n')
     const lyrics = await getLyrics({
         title: title,
@@ -94,7 +94,7 @@ async function getGeniusLyrics (description) {
     return lyrics.replaceAll(regex, '')
 }
 
-async function getAutoLyrixAlignTokens () {
+async function getAutoLyrixAlignTokens() {
     const index = await axios.get('https://autolyrixalign.hltnus.org/', {
         headers: {
             'Host': 'autolyrixalign.hltnus.org',
@@ -120,7 +120,7 @@ async function getAutoLyrixAlignTokens () {
     }
 }
 
-async function getAudio (url) {
+async function getAudio(url) {
     const { stdout } = await exec(`./core.sh ${url}`)
     return stdout.trim()
 }

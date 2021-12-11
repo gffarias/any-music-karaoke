@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtitles Converter</title>
+    <style>
+        .wrapper {
+            display: flex;
+        }
+
+        .wrapper > div {
+            flex: 1;
+            padding: 1%;
+        }
+
+        img {
+            display: block;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        textarea {
+            font-family: monospace;
+            font-size: large;
+            resize: none;
+            width: 100%;
+            height: 70%;
+        }
+        button {
+            height: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <textarea name="genius" rows=30 placeholder="Genius lyrics input"></textarea>
+            <img src="http://images.rapgenius.com/b857207c5de745512bc377284199d781.1000x313x1.png" alt="Genius Logo">
+        </div>
+        <div class="box">
+            <textarea name="autolyrixalign" rows=30 placeholder="AutoLyrixAlign subtitles input"></textarea>
+            <img src="https://autolyrixalign.hltnus.org/assets/image/logo.png" alt="AutoLyrixAlign Logo">
+        </div>
+        <div class="box">
+            <textarea name="parsed" rows=30 readonly placeholder="Output"></textarea>
+        </div>
+        <button>Parse</button>
+    </div>
+    <script src="parser.js"></script>
+    <script>
+        const form = document.querySelector('form')
+        const button = document.querySelector('button')
+        button.addEventListener('click', (event) => {
+            const geniusLyrics = document.querySelector('textarea[name="genius"]').value
+            const autoLyrixAlignLyrics = document.querySelector('textarea[name="autolyrixalign"]').value
+            const parsedLyrics = parseLyrics(geniusLyrics, autoLyrixAlignLyrics)
+            document.querySelector('textarea[name="parsed"]').value = parsedLyrics
+        })
+    </script>
+
+</body>
+</html>
