@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://kit.fontawesome.com/4944c9e8ea.js" crossorigin="anonymous"></script>
 
-    <title>Karaoke</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Any Music Karaokê</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/ico">
+
+    <link rel="preload" href="background.jpg" as="image" type="image/jpeg">
+    <link rel="preload" href="logoGrande.png" as="image" type="image/png">
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+
+    <script src="https://kit.fontawesome.com/4944c9e8ea.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <div class="banner">
         <div class="blur">
             <div class="content">
@@ -20,17 +27,19 @@
                     <img src="logoGrande.png">
                 </div>
                 <form method="post" class="search-box">
-                    <input class = "search-txt"  type="text" placeholder="Insira o URL da música (Youtube)" name="yt"/>
-                  <button type="submit" class="search-btn">
-                    <img src="lupa.png" alt="">
-                  </button>
+                    <input class="search-txt" type="text" name="share" pattern="https:\/\/music.youtube.com\/watch\?v=.*" placeholder="Shareable link for YouTube Music content"/>
+                    <button type="submit" class="search-btn">
+                       <img src="lupa.png" alt="enviar">
+                    </button>
                 </form>
             </div>
             <footer class="footer">
-                <p class="footer-text">©2021 MIR Technologies. All rights reserved.</p>
+                <p class="footer-text">©2021 Any Music Karaokê. All rights reserved.</p>
             </footer>
         </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
