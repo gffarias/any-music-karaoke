@@ -68,11 +68,17 @@ Crie um clone local deste repositório e entre no diretório:
 $ git clone https://github.com/gffarias/any-music-karaoke.git
 $ cd any-music-karaoke
 ```
+
+Instale as dependências:
+```shell
+$ npm install
+```
+
 Ative o servidor:
 ```shell
-$ node server.js
+$ node server
 ```
 ```shell
-Server listening at http://localhost:3000
+http://localhost:3000
 ```
 Agora é só abrir o navegador com a URL [localhost:3000](http://localhost:3000).
