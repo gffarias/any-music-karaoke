@@ -8,9 +8,13 @@ form.addEventListener('submit', event => {  // quando submeter
     // quando o usuário submete uma URL que não é do YouTube Music, aparece uma mensagem de alerta dizendo
     // 'Please, match the requested pattern', e o formulário não é submetido
     // Seria bom customizar essa mensagem de alerta, traduzindo para português
-    // 
+    //
 
-    event.preventDefault() // desabilita o envio do formulário pelo browser, pois faremos com JavaScript
+    event.preventDefault(); // desabilita o envio do formulário pelo browser, pois faremos com JavaScript
+    
+    document.getElementById('main').classList.add('hidden'); // adiciona a classe loading ao elemento main
+    document.getElementById('spinner').classList.remove('hidden'); // adiciona a classe loading ao elemento main
+
     const body = {
         share: form.querySelector('input[name="share"]').value  // URL para a música no YouTube Music
     }

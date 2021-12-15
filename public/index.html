@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,18 +19,22 @@
 
     <script src="https://kit.fontawesome.com/4944c9e8ea.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-    <div class="banner">
+
+
+    <div id="main" class="banner">
         <div class="blur">
             <div class="content">
                 <div class="content-logo">
                     <img src="logoGrande.png">
                 </div>
                 <form method="post" class="search-box">
-                    <input class="search-txt" type="url" name="share" pattern="https:\/\/music.youtube.com\/watch\?v=.*" placeholder="Shareable link for YouTube Music content"/>
+                    <input class="search-txt" type="url" name="share" pattern="https:\/\/music.youtube.com\/watch\?v=.*"
+                        placeholder="Shareable link for YouTube Music content" />
                     <button type="submit" class="search-btn">
-                       <img src="lupa.png" alt="enviar">
+                        <img src="lupa.png" alt="enviar">
                     </button>
                 </form>
             </div>
@@ -38,8 +43,13 @@
             </footer>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
-    <script src="app.js"></script>
+
+    <span id="spinner" class="spinner hidden">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
+        <script src="app.js"></script>
 </body>
+
 </html>
