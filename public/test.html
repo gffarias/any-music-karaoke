@@ -3,9 +3,13 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Barlow&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="external" href='cache/accompaniment/ORrFJ63nlcA.mp3'>
   <title>Karoke Player</title>
+  <link rel="stylesheet" href="./testStyle.css" crossorigin="anonymous">
   <!--
     <style>
       body {
@@ -20,31 +24,37 @@
     }
     </style>
   -->
-  
+
 </head>
 
 <body>
   <!-- <button id="btn1">Play</button>
   <button id="btn2">Pause</button> -->
+  <div class="audio-wrapper">
     <audio id="audio-1" controls>
       <source src="assets/accompaniment/ZEMBDKMtHqM.mp3" type="audio/mpeg">
-  </audio>
-    
-    
-    
-    <div class="rabbit-lyrics" data-media="#audio-1" data-view-mode="mini">
-      [00:00.50] da [00:00.70]re [00:00.90]no [00:01.20]ko [00:01.35]to [00:01.50]wo [00:01.80]ka [00:01.90]n [00:02.15]ga [00:02.30]e [00:02.50]te [00:02.65]ru [00:02.80]no?
-[00:03.10] haato [00:03.70]no [00:03.80]supeesu [00:04.60]so [00:04.80]u [00:05.00]da [00:05.20]tsu [00:05.50]se [00:05.60]n
-[00:05.76] ze [00:06.20]n [00:06.45]ryo [00:06.65]u [00:06.90]te [00:07.20]ki [00:07.40]ni [00:08.20]i [00:08.40]sshi [00:08.80]n [00:09.20]i [00:09.40]tta [00:09.60]i [00:09.80]de
-[00:10.56] yu u da n na ra na i na
-[00:11.70] a no ne i ma no to ko ho n no ka zu percent shi ka
-[00:16.73] aitsu no ko ko ro ni i ba sho ga na i n da
-[00:21.38]
-      </div>
-    <script src="https://unpkg.com/rabbit-lyrics" type="text/javascript"></script>
-    <script src="p5/p5.js"></script>
-    <script src="p5/addons/p5.sound.js"></script>  
+    </audio>
+  </div>
+
+  <div class="rabbit-lyrics " id="subtitle" data-media="#audio-1" data-view-mode="mini">
+    [00:00.50] da [00:00.70]re [00:00.90]no [00:01.20]ko [00:01.35]to [00:01.50]wo [00:01.80]ka [00:01.90]n [00:02.15]ga
+    [00:02.30]e [00:02.50]te [00:02.65]ru [00:02.80]no?
+    [00:03.10] haato [00:03.70]no [00:03.80]supeesu [00:04.60]so [00:04.80]u [00:05.00]da [00:05.20]tsu [00:05.50]se
+    [00:05.60]n
+    [00:05.76] ze [00:06.20]n [00:06.45]ryo [00:06.65]u [00:06.90]te [00:07.20]ki [00:07.40]ni [00:08.20]i
+    [00:08.40]sshi [00:08.80]n [00:09.20]i [00:09.40]tta [00:09.60]i [00:09.80]de
+    [00:10.56] yu u da n na ra na i na
+    [00:11.70] a no ne i ma no to ko ho n no ka zu percent shi ka
+    [00:16.73] aitsu no ko ko ro ni i ba sho ga na i n da
+    [00:21.38]
+  </div>
+  <script src="https://unpkg.com/rabbit-lyrics" type="text/javascript"></script>
+  <script src="p5/p5.js"></script>
+  <script src="p5/addons/p5.sound.js"></script>
+
+  <div id="wrapper">
     <script src="sketch.js"></script>
+  </div>
 </body>
 
 </html>
