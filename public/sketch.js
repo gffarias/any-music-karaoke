@@ -1,6 +1,6 @@
 let Shader;
 let pinned;
-// let sound;
+let sound;
 const balls=[],radius=20,num=64,maxSpeed=15;
 const G=radius/num*20;
 function preload(){
@@ -22,7 +22,14 @@ function setup() {
     balls.push(b);
   }
   ft = new p5.FFT(0.7,64);
-  // sound=loadSound(document.querySelector('link').href,()=>{sound.play()});
+  const audioTag = document.getElementById('audio-1');
+  audioTag.addEventListener('play', (e) => {
+    sound.play();
+  });
+  audioTag.addEventListener('pause', (e) => {
+    sound.pause();
+  });
+  sound=loadSound('assets/accompaniment/ZEMBDKMtHqM.mp3');
 }
 function draw() {
   let data=[];
