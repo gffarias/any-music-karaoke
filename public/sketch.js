@@ -8,7 +8,9 @@ function preload(){
 }
 function setup() {
   pixelDensity(1);
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  const canvas = createCanvas(windowWidth * 0.8, windowHeight * 0.8, WEBGL);
+  canvas.parent('wrapper');
+  
   noStroke();
   for (let i=0;i<num;i++) {
     let a=random(2*PI);

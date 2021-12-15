@@ -1,0 +1,27 @@
+body{
+  background: black !important;
+  width: 98vw;
+  height: 98vh;
+}
+
+#subtitle {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Bakbak One', cursive;
+
+}
+
+#wrapper{
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+}
+
